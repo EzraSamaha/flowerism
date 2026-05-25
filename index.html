@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowerism Manifesto</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-start: #fff8ef;
+      --bg-end: #f6efe7;
+      --text: #2f241d;
+      --accent: #9e4f2e;
+      --accent-hover: #7f3f24;
+      --card: rgba(255, 255, 255, 0.8);
+      --shadow: rgba(83, 48, 31, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.85), transparent 45%),
+        linear-gradient(160deg, var(--bg-start), var(--bg-end));
+    }
+
+    main {
+      width: min(100%, 720px);
+      padding: 56px 40px;
+      text-align: center;
+      background: var(--card);
+      border: 1px solid rgba(47, 36, 29, 0.08);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    a {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--accent);
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Flowerism Manifesto</h1>
+    <a href="downloads/flowerism.2026-05-25.pdf" download>Download Manifesto</a>
+  </main>
+</body>
+</html>
