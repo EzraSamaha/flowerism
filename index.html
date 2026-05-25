@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flowerism Manifesto</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-REGJQTKKD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-REGJQTKKD4');
+  </script>
   <style>
     :root {
       color-scheme: light;
@@ -72,7 +81,19 @@
 <body>
   <main>
     <h1>Flowerism Manifesto</h1>
-    <a href="downloads/flowerism.2026-05-25.pdf" download>Download Manifesto</a>
+    <a id="manifesto-download" href="downloads/flowerism.2026-05-25.pdf" download>Download Manifesto</a>
   </main>
+  <script>
+    const manifestoDownloadLink = document.getElementById('manifesto-download');
+
+    if (manifestoDownloadLink && typeof gtag === 'function') {
+      manifestoDownloadLink.addEventListener('click', function () {
+        gtag('event', 'manifesto_download', {
+          file_name: 'flowerism.2026-05-25.pdf',
+          link_text: 'Download Manifesto'
+        });
+      });
+    }
+  </script>
 </body>
 </html>
